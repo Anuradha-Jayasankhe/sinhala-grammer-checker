@@ -1,0 +1,5 @@
+Sentence is grammatically incorrect.
+ptom: trembling
+Symptom: tiredness
+Symptom: appette
+: change_in_voice

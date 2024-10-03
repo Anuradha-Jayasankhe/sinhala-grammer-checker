@@ -2,7 +2,7 @@ from os import open, close, dup, O_WRONLY
 
 from pyswip import Prolog
 
-from pyes.data import getdata
+from es.data import getdata
 
 prolog = Prolog()
 prolog.consult('es/kb.pl')
@@ -25,7 +25,7 @@ def process_user_query(query: str):
 
     old = dup(1)
     close(1)
-    open("pyes/data.txt", O_WRONLY)
+    open("es/data.txt", O_WRONLY)
 
     results = list(prolog.query(prolog_query))
 
