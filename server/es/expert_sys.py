@@ -9,7 +9,19 @@ prolog.consult('es/kb.pl')
 
 
 def translate_to_prolog_query(verbal_query):
-    return "check_grammar([" + verbal_query + "])."
+    li = verbal_query.split(' ')
+    final_code = "check_grammar(["
+    i = 0
+    for word in li:
+        if (i>0):
+            final_code = final_code + ","
+        final_code = final_code + "'" + word + "'"
+        i = i + 1
+    final_code = final_code + "])."
+
+    print(final_code)
+    
+    return final_code
 
 
 def remove_special_chars(input_str: str) -> str:

@@ -6,7 +6,7 @@ from routes import auth, esystem
 
 app = FastAPI()
 
-origins = ['http://localhost:3000', 'http://192.168.178.23:3000'] 
+origins = ['http://localhost:3000', 'http://192.168.178.23:3000', "http://localhost:5173"] 
 
 app.add_middleware(
     CORSMiddleware,
